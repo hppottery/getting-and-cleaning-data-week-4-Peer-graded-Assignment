@@ -1,9 +1,9 @@
-library(plyr)
+library(dplyr)
 
 
 # Download the dataset
 
-filename <- "Coursera_DS3_Final.zip"
+filename <- "UCI HAR Dataset.zip"
 
 # Checking if archieve already exists.
 if (!file.exists(filename)){
@@ -12,7 +12,8 @@ if (!file.exists(filename)){
 }  
 
 # Checking if folder exists
-if (!file.exists("UCI HAR Dataset")) { 
+dataPath <- "UCI HAR Dataset"
+if (!file.exists(dataPath)) { 
   unzip(filename) 
 }
 
